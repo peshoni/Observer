@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Observer.Observer">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAA=</HashCode>
+      <FileName>Observer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.Program" Collapsed="true">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAABAAAAAAAAGAAAAAAAAEAAAAAAAAAAABAgAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.Warehouse">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <AssociationLine Name="SalesList" Type="Observer.SalesList" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="6.375" />
+        <Point X="7.75" Y="6.375" />
+        <Point X="7.75" Y="5.213" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SupplyList" Type="Observer.SupplyList" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="6.375" />
+        <Point X="3.75" Y="6.375" />
+        <Point X="3.75" Y="5.213" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIiIAABICIAAAAAAAAAABAAAIgAAAAIAAAAEAAKAo=</HashCode>
+      <FileName>Warehouse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SalesList" />
+      <Property Name="SupplyList" />
+      <Property Name="Available" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Observer.Sale">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAABAAAAAQAAAAAAAAAACAAAgAgAAAAAA=</HashCode>
+      <FileName>Sale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.Delivery">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAgAgAAYAAA=</HashCode>
+      <FileName>Delivery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.SupplyList">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgABAAAAAQAAAAEAAAAAAAAAAAAAEAAg=</HashCode>
+      <FileName>SuplyList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Delivery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Observer.SalesList">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAgABAAAAAQAAAQAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>SalesList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sale" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Observer.Available">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAQAAAQEAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Available.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer.Product">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAACAAAAAgAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
