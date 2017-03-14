@@ -8,24 +8,24 @@ namespace Observer
 {
     class Product
     {
-        private string name;
-        private int quantity;
-        public Product(string aName, int aQuantity)
+        private string _name;
+        private int _quantity;
+        public Product(string name, int quantity)
         {
-            this.Name = aName;
-            this.Quantity = aQuantity;
+            this._name = name;
+            this._quantity = quantity;
         }
         #region Getters and setters
         public string Name
         {
             get
             {
-                return name;
+                return _name;
             }
 
             set
             {
-                name = value;
+                _name = value;
             }
         }
 
@@ -33,12 +33,12 @@ namespace Observer
         {
             get
             {
-                return quantity;
+                return _quantity;
             }
 
             set
             {
-                quantity = value;
+                _quantity = value;
             }
         }
         #endregion
