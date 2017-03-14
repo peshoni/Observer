@@ -75,42 +75,6 @@ namespace Observer
             }
         }
 
-        public SalesList SalesList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        internal SupplyList SupplyList
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
-        public Available Available
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-
-            set
-            {
-            }
-        }
-
 
         #endregion
 
@@ -129,7 +93,13 @@ namespace Observer
                  notifyAll(); 
         }
 
-        public void MakeASale( Sale sale) { 
+        public void MakeASale( Sale sale) {
+            /// Gates available quantity..
+            Observer list =   _observers.Find(element =>   element.GetType().Equals(typeof(Available)));
+            Available l = (Available)list;
+            int q = ((Product)l.Table[sale.ProductName]).Quantity;
+            ////////
+
                 this.Sale = sale;
                 _isSold = true;
                 notifyAll(); 

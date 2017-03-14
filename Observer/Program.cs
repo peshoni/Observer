@@ -34,7 +34,7 @@ namespace Observer
             warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 3", 200));
             warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 3", 300));
 
-
+           
             Console.WriteLine("After delivery..");
             showDeliveryes();
             showAvailable(); 

@@ -38,7 +38,7 @@ namespace Observer
             }
         }
         /// <summary>
-        /// sells products from warehouse.
+        /// Sells products from warehouse.
         /// </summary>
         /// <param name="delivery"></param>
         private void sellProduct( Sale sale )
@@ -48,7 +48,7 @@ namespace Observer
                 if (((Product)Table [key]).Quantity<sale.Quantity)
                 {
                     ((Product)Table [key]).Quantity -= sale.Quantity;
-                    throw new Exception();
+                    throw new Exception("");
                 }  
            } 
         }
