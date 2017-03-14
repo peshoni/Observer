@@ -8,23 +8,23 @@ namespace Observer
 {
     public class Warehouse
     {    
-        private List<Observer> observers = new List<Observer>(); 
-        private Delivery delivery;  
-        private Sale sale;
-        private bool isDelivery;
-        private bool isSold;
+        private List<Observer> _observers = new List<Observer>(); 
+        private Delivery _delivery;  
+        private Sale _sale;
+        private bool _isDelivery;
+        private bool _isSold;
 
         #region Getters and Setters 
         public Delivery Delivery
         {
             get
             {
-                return delivery;
+                return _delivery;
             }
 
             set
             {
-                delivery = value;
+                _delivery = value;
             }
         }
 
@@ -32,7 +32,7 @@ namespace Observer
         {
             get
             {
-                return observers;
+                return _observers;
             } 
         }
 
@@ -40,12 +40,12 @@ namespace Observer
         {
             get
             {
-                return sale;
+                return _sale;
             }
 
             set
             {
-                sale = value;
+                _sale = value;
             }
         }
 
@@ -53,12 +53,12 @@ namespace Observer
         {
             get
             {
-                return isDelivery;
+                return _isDelivery;
             }
 
             set
             {
-                isDelivery = value;
+                _isDelivery = value;
             }
         }
 
@@ -66,12 +66,12 @@ namespace Observer
         {
             get
             {
-                return isSold;
+                return _isSold;
             }
 
             set
             {
-                isSold = value;
+                _isSold = value;
             }
         }
 
@@ -123,15 +123,15 @@ namespace Observer
         }
 
 
-        public void MakeDelivery( Delivery aDelivеry ) {
-                 this.Delivery = aDelivеry;
-                 isDelivery = true;                      
+        public void MakeDelivery( Delivery delivеry ) {
+                 this.Delivery = delivеry;
+                 _isDelivery = true;                      
                  notifyAll(); 
         }
 
-        public void MakeASale( Sale aSale) { 
-                this.Sale = aSale;
-                isSold = true;
+        public void MakeASale( Sale sale) { 
+                this.Sale = sale;
+                _isSold = true;
                 notifyAll(); 
         }
        
@@ -143,8 +143,8 @@ namespace Observer
             Observers.ForEach(element=> {
                 element.update();
             });
-            isDelivery = false;
-            isSold = false;
+            _isDelivery = false;
+            _isSold = false;
         }
     }
 }

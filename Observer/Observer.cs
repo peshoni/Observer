@@ -9,7 +9,7 @@ namespace Observer
 {
     public abstract class Observer  
     {
-       protected Warehouse warehouse;
+       protected Warehouse _warehouse;
 
         /// <summary>
         /// Update all observers.

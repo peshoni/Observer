@@ -9,28 +9,28 @@ namespace Observer
 {
     public class SalesList : Observer
     {
-        private Hashtable table;
+        private Hashtable _table;
         private int ID;
 
         public Hashtable Table
         {
             get
             {
-                return table;
+                return _table;
             } 
         }
 
-        public SalesList( Warehouse aWarehouse )
+        public SalesList( Warehouse warehouse )
         {
-            this.table = new Hashtable(); 
-            this.warehouse = aWarehouse;
-            this.warehouse.attachObserver(this);
+            this._table = new Hashtable(); 
+            this._warehouse = warehouse;
+            this._warehouse.attachObserver(this);
         }
  
 
         public override void update()
         {
-            sellProduct(warehouse.Sale);
+            sellProduct(_warehouse.Sale);
         }
 /// <summary>
 /// Registering sold in the table.
@@ -38,7 +38,7 @@ namespace Observer
 /// <param name="sale"></param>
         private void sellProduct(Sale sale)
         {
-            if (sale != null && warehouse.IsSold)
+            if (sale != null && _warehouse.IsSold)
             {
                 Table.Add(++ID, sale);
             }

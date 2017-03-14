@@ -7,20 +7,20 @@ namespace Observer
 {
     public class Delivery 
     {
-        private string providerName;
-        private string productName;
-        private int quantity;
+        private string _providerName;
+        private string _productName;
+        private int _quantity;
         #region Getters and setters
         public string ProviderName
         {
             get
             {
-                return providerName;
+                return _providerName;
             }
 
             set
             {
-                providerName = value;
+                _providerName = value;
             }
         }
 
@@ -28,12 +28,12 @@ namespace Observer
         {
             get
             {
-                return productName;
+                return _productName;
             }
 
             set
             {
-                productName = value;
+                _productName = value;
             }
         }
 
@@ -41,20 +41,20 @@ namespace Observer
         {
             get
             {
-                return quantity;
+                return _quantity;
             }
 
             set
             {
-                quantity = value;
+                _quantity = value;
             }
         }
         #endregion
         public Delivery(string Provider, string ProductName, int Quantity )
         {
-            this.ProviderName = Provider;
-            this.ProductName = ProductName;
-            this.Quantity = Quantity;
+            this._providerName = Provider;
+            this._productName = ProductName;
+            this._quantity = Quantity;
         } 
     }
 }

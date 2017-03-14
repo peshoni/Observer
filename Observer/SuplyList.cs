@@ -9,14 +9,14 @@ namespace Observer
 {
     class SupplyList : Observer
     { 
-        private Hashtable table;
+        private Hashtable _table;
         private int ID; 
 
-        public SupplyList( Warehouse aWarehouse )
+        public SupplyList( Warehouse warehouse )
         { 
-            this.table = new Hashtable();
-            this.warehouse = aWarehouse;
-            this.warehouse.attachObserver(this); 
+            this._table = new Hashtable();
+            this._warehouse = warehouse;
+            this._warehouse.attachObserver(this); 
         }
   
 
@@ -24,7 +24,7 @@ namespace Observer
         {
             get
             {
-                return table;
+                return _table;
             } 
         } 
 
@@ -33,7 +33,7 @@ namespace Observer
         /// </summary> 
         public override void update()
         {
-            addProduct(warehouse.Delivery);
+            addProduct(_warehouse.Delivery);
         }
 
         private void addProduct( Delivery delivery)
