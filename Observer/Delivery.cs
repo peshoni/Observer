@@ -50,11 +50,11 @@ namespace Observer
             }
         }
         #endregion
-        public Delivery(string Provider, string ProductName, int Quantity )
+        public Delivery(string providerName, string productName, int quantity )
         {
-            this._providerName = Provider;
-            this._productName = ProductName;
-            this._quantity = Quantity;
+            this._providerName = providerName;
+            this._productName = productName;
+            this._quantity = quantity;
         } 
     }
 }
