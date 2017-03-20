@@ -95,14 +95,19 @@ namespace Observer
 
         public void MakeASale( Sale sale) {
             /// Gates available quantity..
-            Observer list =   _observers.Find(element =>   element.GetType().Equals(typeof(Available)));
-            Available l = (Available)list;
-            int q = ((Product)l.Table[sale.ProductName]).Quantity;
-            ////////
-
+            Observer list =   _observers.Find(element => element.GetType().Equals(typeof(Available)));
+            Available table = (Available)list;
+            int q = ((Product)table.Table[sale.ProductName]).Quantity;
+            if (q > sale.Quantity)
+            {
                 this.Sale = sale;
                 _isSold = true;
-                notifyAll(); 
+                notifyAll();
+            }
+            else {
+                Console.WriteLine(" Your request for " + sale.Quantity + " units of '"+sale.ProductName+"' can not be executed!");
+                Console.WriteLine(" Available from stock '"+ sale.ProductName+"' are: "+ q);
+            } 
         }
        
 

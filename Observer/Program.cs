@@ -24,15 +24,15 @@ namespace Observer
             Console.WriteLine("Before delivery..");
             showAvailable();    
 
-            warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 1" , 1000));
-            warehouse.MakeDelivery(new Delivery("Firm2", "Stoka 1", 2000));
-            warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 1", 3000));
-            warehouse.MakeDelivery(new Delivery("Firm3", "Stoka 1", 1));
-            warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 1", 20));
-            warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 1", 300));
-            warehouse.MakeDelivery(new Delivery("Firm3", "Stoka 3", 100));
-            warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 3", 200));
-            warehouse.MakeDelivery(new Delivery("Firm1", "Stoka 3", 300));
+            warehouse.MakeDelivery(new Delivery("Firm1", "Product 1" , 1000));
+            warehouse.MakeDelivery(new Delivery("Firm2", "Product 1", 2000));
+            warehouse.MakeDelivery(new Delivery("Firm1", "Product 1", 3000));
+            warehouse.MakeDelivery(new Delivery("Firm3", "Product 1", 1));
+            warehouse.MakeDelivery(new Delivery("Firm1", "Product 1", 20));
+            warehouse.MakeDelivery(new Delivery("Firm1", "Product 1", 300));
+            warehouse.MakeDelivery(new Delivery("Firm3", "Product 3", 100));
+            warehouse.MakeDelivery(new Delivery("Firm1", "Product 3", 200));
+            warehouse.MakeDelivery(new Delivery("Firm1", "Product 3", 300));
 
            
             Console.WriteLine("After delivery..");
@@ -41,17 +41,12 @@ namespace Observer
 
             Console.WriteLine("Available : ");
             showAvailable();
-            try
-            {
-                warehouse.MakeASale(new Sale("random client", "Stoka 1", 259));
-                warehouse.MakeASale(new Sale("random client2", "Stoka 1", 1000));
-                warehouse.MakeASale(new Sale("random client3", "Stoka 1", 10)); 
-                warehouse.MakeASale(new Sale("random client4", "Stoka 3", 1000)); 
-            }
-            catch (Exception)
-            { 
-                Console.WriteLine("\t\tIt's time to delivery!!!!!!! \n");
-            } 
+           
+                warehouse.MakeASale(new Sale("random client", "Product 1", 259));
+                warehouse.MakeASale(new Sale("random client2", "Product 1", 1000));
+                warehouse.MakeASale(new Sale("random client3", "Product 1", 10)); 
+                warehouse.MakeASale(new Sale("random client4", "Product 3", 1000)); 
+           
             
             Console.WriteLine("Sold : ");
             showSales();
